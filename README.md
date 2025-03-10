@@ -1,4 +1,4 @@
-Auth0 quick start not working for Next.js? Its probably because you are using the V3 documentation they provide with the V4 package installed. Here is a demo of simple login with V4 of auth0/nextjs-auth0
+Auth0 quick start not working for Next.js? Its probably because you are using the V3 documentation they provide with the V4 package installed. Here is a demo of simple login with V4 of auth0/nextjs-auth0. 
 
 ## Getting Started
 
@@ -20,16 +20,28 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Quick Rundown of file
+This is a demo project of how to implement a simple login on auth0/nextjs-auth0 V4. This consists of 3 major files:
 
-To learn more about Next.js, take a look at the following resources:
+### middleware.js
+This file replaces the Route Handler, under /app/api/auth/[auth0]/route.ts that was present in V3 of auth0. (as explained in the V4 migration guide: https://github.com/auth0/nextjs-auth0/blob/main/V4_MIGRATION_GUIDE.md)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### lib/auth0.js
+This file instantiates an auth0client
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### page.js (home page)
+This file imports the { auth0} from lib/auth0.js and uses get session to conditionally render a sign up/login button or a logout button based on whether the user has an active session.
 
-## Deploy on Vercel
+
+## Final Note on .env file
+Make sure that the format/naming convention of your environment variables are correct. See migration guide above to double check. The environment variable naming conventions have change from V3 and the sample file in this project is correct as us the writing of this readme file.
+
+This link is also useful for navigating V4 documentation: https://github.com/auth0/nextjs-auth0/blob/main/EXAMPLES.md
+
+
+
+
+
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
