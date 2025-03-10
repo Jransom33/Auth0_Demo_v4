@@ -1,25 +1,5 @@
 Auth0 quick start not working for Next.js? Its probably because you are using the V3 documentation they provide with the V4 package installed. Here is a demo of simple login with V4 of auth0/nextjs-auth0. 
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
 ## Quick Rundown of file
 This is a demo project of how to implement a simple login on auth0/nextjs-auth0 V4. This consists of 3 major files:
 
