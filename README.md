@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Auth0 quick start not working for Next.js? Its probably because you are using the V3 documentation they provide with the V4 package installed. Here is a demo of simple login with V4 of auth0/nextjs-auth0
 
 ## Getting Started
 
